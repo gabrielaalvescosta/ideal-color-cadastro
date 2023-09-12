@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import InputCadastro from '../../components/input'
-import StyledSelectComponent from '../../components/select'
+import StyledSelectComponent from '../../components/select/Select'
+import StyledInput from '@/app/components/input/Input';
+import StyledButton from '@/app/components/botao/Botao';
 
 const colorOptions = [
   { label: 'Vermelho', value: 'red' },
@@ -37,13 +38,13 @@ export default function ProductForm() {
   return (
     <div>
       <h2>Cadastro de Produto</h2>
-      <InputCadastro
+      <StyledInput
         label="Nome do Produto"
         name="name"
         value={productInfo.name}
         onChange={handleChange}
       />
-      <InputCadastro
+      <StyledInput
         label="Preço do Produto"
         name="price"
         value={productInfo.price}
@@ -55,7 +56,7 @@ export default function ProductForm() {
         value={productInfo.color}
         onChange={handleChange}
       />
-      <InputCadastro
+      <StyledInput
         label="URL do Produto"
         name="url"
         value={productInfo.url}
@@ -67,13 +68,13 @@ export default function ProductForm() {
         value={productInfo.category}
         onChange={handleChange}
       />
-      <InputCadastro
+      <StyledInput
         label="Quantidade Disponível"
         name="quantity"
         value={productInfo.quantity}
         onChange={handleChange}
       />
-      <Botao label="Enviar Cadastro" onClick={handleSubmit} />
+      <StyledButton label="Enviar Cadastro" onClick={handleSubmit} />
     </div>
   );
 }
