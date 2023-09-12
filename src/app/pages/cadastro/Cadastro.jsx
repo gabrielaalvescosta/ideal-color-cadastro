@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import StyledSelectComponent from '../../components/select/Select'
 import StyledInput from '@/app/components/input/Input';
 import StyledButton from '@/app/components/botao/Botao';
+import Titulo from '@/app/components/titulo/Titulo';
 
 const colorOptions = [
   { label: 'Vermelho', value: 'red' },
@@ -31,13 +32,12 @@ export default function ProductForm() {
   };
 
   const handleSubmit = () => {
-    // Lógica para enviar a requisição POST com as informações do produto
     console.log(productInfo);
   };
 
   return (
     <div>
-      <h2>Cadastro de Produto</h2>
+      <Titulo h2="Cadastro de Produtos"/>
       <StyledInput
         label="Nome do Produto"
         name="name"

@@ -7,7 +7,7 @@ const DeviceWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 375px;
-  height: 99vh; 
+  height: 90vh; 
   margin: 0 auto;
   border: 1px solid #000;
   background-color: #fff;
