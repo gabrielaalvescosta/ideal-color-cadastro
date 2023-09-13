@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { BottomNavigation, BottomNavigationAction } from '@mui/material';
 import { Person, Search, AddBox } from '@mui/icons-material';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
-export default function MenuInferior() {
+export default function NavigatorMenu() {
 
   const [value, setValue] = useState('');
 
@@ -27,7 +27,7 @@ export default function MenuInferior() {
 
       <BottomNavigationAction
         component={Link}
-        to="/cadastro"
+        href="/cadastro"
         label="Cadastro"
         value="cadastro"
         icon={<AddBox />}
@@ -36,7 +36,7 @@ export default function MenuInferior() {
 
       <BottomNavigationAction
         component={Link}
-        to="/login"
+        href="/login"
         label="Login"
         value="login"
         icon={<Person />}
@@ -44,7 +44,7 @@ export default function MenuInferior() {
 
       <BottomNavigationAction
         component={Link}
-        to="/produtos"
+        href="/produtos"
         label="Pesquisar"
         value="pesquisar"
         icon={<Search />}

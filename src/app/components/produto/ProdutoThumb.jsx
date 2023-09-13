@@ -1,5 +1,5 @@
 import React from 'react';
-import Produto from '../components/Produto.js';
+import Produto from '@/app/components/produto/Produto';
 
 const products = [
   {

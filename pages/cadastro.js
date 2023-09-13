@@ -3,7 +3,9 @@ import StyledSelectComponent from '../src/app/components/select/Select'
 import StyledInput from '@/app/components/input/Input';
 import StyledButton from '@/app/components/botao/Botao';
 import Titulo from '@/app/components/titulo/Titulo';
-import { useRouter } from 'next/router';
+import DeviceWrapper from '@/app/components/mobile/SimulacaoDevice';
+import Wrapper from '@/app/components/wrapper/Wrapper';
+import NavigatorMenu from '@/app/components/navigator/NavigatorMenu'
 
 
 const colorOptions = [
@@ -40,7 +42,8 @@ export default function ProductForm() {
   };
 
   return (
-    <div>
+    <Wrapper>
+    <DeviceWrapper>
       <Titulo h2="Cadastro de Produtos"/>
       <StyledInput
         label="Nome do Produto"
@@ -79,6 +82,8 @@ export default function ProductForm() {
         onChange={handleChange}
       />
       <StyledButton label="Enviar Cadastro" onClick={handleSubmit} />
-    </div>
+      <NavigatorMenu/>
+    </DeviceWrapper>
+    </Wrapper>
   );
 }

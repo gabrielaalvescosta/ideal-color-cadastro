@@ -1,14 +1,15 @@
-import React from 'react';
-import { useRouter } from 'next/router';
+import React, { useState } from 'react';
 import Titulo from '@/app/components/titulo/Titulo';
 import StyledInput from '@/app/components/input/Input';
-
+import DeviceWrapper from '@/app/components/mobile/SimulacaoDevice';
+import Wrapper from '@/app/components/wrapper/Wrapper';
+import NavigatorMenu from '@/app/components/navigator/NavigatorMenu'
 
 export default function Login() {
 
     const [formData, setFormData] = useState({
         login: 'exemploNome',
-        senha: 'exemploSenha',
+        senha: 'exemploSenha123',
       });
     
       const handleChange = (e) => {
@@ -21,26 +22,28 @@ export default function Login() {
     
       const handleSubmit = (e) => {
         e.preventDefault();
-        // Aqui você pode adicionar lógica para enviar os dados de login
       };
     
 
   return (
-    <div>
+    <Wrapper>
+      <DeviceWrapper>
     <Titulo h2="Login"/>
     <StyledInput
         label="Nome do Produto"
         name="name"
-        value={formatData.login}
+        value={formData.login}
         onChange={handleChange}
     />
     <StyledInput
         label="Senha"
         name="senha"
         type="password"
-        value={formatData.senha}
+        value={formData.senha}
         onChange={handleChange}
     />
-    </div>
+    <NavigatorMenu/>
+    </DeviceWrapper>
+    </Wrapper>
   )
 }
