@@ -22,6 +22,36 @@ const categoryOptions = [
 
 export default function ProductForm() {
 
+  const [novoRegistro, setNovoRegistro] = useState({
+    // Inicialize os campos do novo registro aqui
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setNovoRegistro({ ...novoRegistro, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    try {
+      const response = await fetch('/idealcolors/api/produto/cadastrar', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(novoRegistro),
+      });
+
+      if (response.ok) {
+        console.log('Registro criado com sucesso!');
+      } else {
+        console.error('Erro ao criar registro');
+      }
+    } catch (error) {
+      console.error('Erro ao criar registro:', error);
+    }
+  };
 
   const [productInfo, setProductInfo] = useState({
     name: '',
@@ -37,9 +67,6 @@ export default function ProductForm() {
     setProductInfo({ ...productInfo, [name]: value });
   };
 
-  const handleSubmit = () => {
-    console.log(productInfo);
-  };
 
   return (
     <Wrapper>
