@@ -8,12 +8,6 @@ import Wrapper from '@/app/components/wrapper/Wrapper';
 import NavigatorMenu from '@/app/components/navigator/NavigatorMenu'
 
 
-const colorOptions = [
-  { label: 'Vermelho', value: 'red' },
-  { label: 'Verde', value: 'green' },
-  { label: 'Azul', value: 'blue' },
-];
-
 const categoryOptions = [
   { label: 'Eletrônicos', value: 'electronics' },
   { label: 'Roupas', value: 'clothing' },
@@ -30,6 +24,9 @@ export default function ProductForm() {
     category: '',
     quantity: '',
   });
+
+  let colorOptions = [];
+  let categoryOptions = [];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -59,20 +56,20 @@ export default function ProductForm() {
   };
 
 
-  async function catchCategories(id) {
+  async function getServerSideProps() {
+
     try {
-      const response = await fetch(`/idealcolors/api/produto/${id}`); // Substitua pela URL correta da sua API
+      const response = await fetch(`/idealcolors/api/coloracaopessoal`);
       if (!response.ok) {
         throw new Error('Erro ao buscar cartelas');
       }
-      const data = await response.json();
-      return data;
+      colorOptions = await response.json();
+      return colorOptions;
     } catch (error) {
       console.error('Erro ao buscar categorias:', error);
       return [];
     }
   }
-
 
   return (
     <Wrapper>
