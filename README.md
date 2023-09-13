@@ -43,3 +43,6 @@ Após os passos acima, abra [http://localhost:3000](http://localhost:3000) no se
 Este produto usa [`next/font`](https://nextjs.org/docs/basic-features/font-optimization)
 
 
+## Back-end do projeto
+O back-end deste projeto pode ser conferido neste link
+[https://github.com/Jakeline-xx/IdealColors/tree/main](https://github.com/Jakeline-xx/IdealColors/tree/main)
