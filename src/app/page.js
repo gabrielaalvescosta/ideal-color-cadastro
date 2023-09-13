@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
-import DeviceWrapper from '../../src/app/components/mobile/SimulacaoDevice'
-import Cadastro from './pages/cadastro/Cadastro'
+import DeviceWrapper from './components/mobile/SimulacaoDevice'
+import Cadastro from '../../pages/cadastro'
 import Wrapper from './components/wrapper/Wrapper';
 import NavigatorMenu from './components/navigator/NavigatorMenu'
 
@@ -9,8 +9,8 @@ export default function HomePage() {
   return (
     <Wrapper>
     <DeviceWrapper>
-      <NavigatorMenu/>
       <Cadastro/>
+      <NavigatorMenu/>
     </DeviceWrapper>
     </Wrapper>
   );

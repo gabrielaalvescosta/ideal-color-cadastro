@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import StyledSelectComponent from '../../components/select/Select'
+import StyledSelectComponent from '../src/app/components/select/Select'
 import StyledInput from '@/app/components/input/Input';
 import StyledButton from '@/app/components/botao/Botao';
 import Titulo from '@/app/components/titulo/Titulo';
+import { useRouter } from 'next/router';
+
 
 const colorOptions = [
   { label: 'Vermelho', value: 'red' },
@@ -17,6 +19,8 @@ const categoryOptions = [
 ];
 
 export default function ProductForm() {
+
+
   const [productInfo, setProductInfo] = useState({
     name: '',
     price: '',
