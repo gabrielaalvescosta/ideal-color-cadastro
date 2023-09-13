@@ -22,13 +22,18 @@ const categoryOptions = [
 
 export default function ProductForm() {
 
-  const [novoRegistro, setNovoRegistro] = useState({
-    // Inicialize os campos do novo registro aqui
+  const [newProductInfo, setNewProductInfo] = useState({
+    name: '',
+    price: '',
+    color: '',
+    url: '',
+    category: '',
+    quantity: '',
   });
 
-  const handleInputChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setNovoRegistro({ ...novoRegistro, [name]: value });
+    setNewProductInfo({ ...newProductInfo, [name]: value });
   };
 
   const handleSubmit = async (e) => {
@@ -53,19 +58,20 @@ export default function ProductForm() {
     }
   };
 
-  const [productInfo, setProductInfo] = useState({
-    name: '',
-    price: '',
-    color: '',
-    url: '',
-    category: '',
-    quantity: '',
-  });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setProductInfo({ ...productInfo, [name]: value });
-  };
+  async function catchCategories(id) {
+    try {
+      const response = await fetch(`/idealcolors/api/produto/${id}`); // Substitua pela URL correta da sua API
+      if (!response.ok) {
+        throw new Error('Erro ao buscar cartelas');
+      }
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Erro ao buscar categorias:', error);
+      return [];
+    }
+  }
 
 
   return (
@@ -75,37 +81,37 @@ export default function ProductForm() {
       <StyledInput
         label="Nome do Produto"
         name="name"
-        value={productInfo.name}
+        value={newProductInfo.name}
         onChange={handleChange}
       />
       <StyledInput
         label="Preço do Produto"
         name="price"
-        value={productInfo.price}
+        value={newProductInfo.price}
         onChange={handleChange}
       />
       <StyledSelectComponent
         label="Cartela de Cores"
         options={colorOptions}
-        value={productInfo.color}
+        value={newProductInfo.color}
         onChange={handleChange}
       />
       <StyledInput
         label="URL do Produto"
         name="url"
-        value={productInfo.url}
+        value={newProductInfo.url}
         onChange={handleChange}
       />
       <StyledSelectComponent
         label="Categoria do Produto"
         options={categoryOptions}
-        value={productInfo.category}
+        value={newProductInfo.category}
         onChange={handleChange}
       />
       <StyledInput
         label="Quantidade Disponível"
         name="quantity"
-        value={productInfo.quantity}
+        value={newProductInfo.quantity}
         onChange={handleChange}
       />
       <StyledButton label="Enviar Cadastro" onClick={handleSubmit} />
