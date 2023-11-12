@@ -22,7 +22,14 @@ Além disso, de modo que reduza o desperdício de recursos naturais, evitando a 
   <li>94305 - Milena Vitoria da Silva Goes</li>
 </ul>
 
-## Front end desta aplicação em React Native para Android
+## Ferramentas utilizadas para o front-end
+- ReactJS / Next.js
+- Material UI
+- Styled Components
+- React Icons
+- Tailwind CSS
+
+### Front end desta aplicação em React Native para Android
 Está disponível no [Snack.expo.dev](https://snack.expo.dev/@milenaggoes/idealcolors--sprint4?platform=android)
 
 ## Endpoints
