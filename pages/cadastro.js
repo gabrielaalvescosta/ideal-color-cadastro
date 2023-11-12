@@ -18,11 +18,10 @@ export default function ProductForm() {
 
   const [newProductInfo, setNewProductInfo] = useState({
     name: '',
-    price: '',
-    color: '',
-    url: '',
-    category: '',
-    quantity: '',
+    email: '',
+    senha: '',
+    cartelaCores: [],
+    
   });
 
   let colorOptions = [];
@@ -74,41 +73,23 @@ export default function ProductForm() {
   return (
     <Wrapper>
     <DeviceWrapper>
-      <Titulo h2="Cadastro de Produtos"/>
+      <Titulo h2="Cadastre-se"/>
       <StyledInput
-        label="Nome do Produto"
+        label="Nome completo"
         name="name"
         value={newProductInfo.name}
         onChange={handleChange}
       />
       <StyledInput
-        label="Preço do Produto"
-        name="price"
+        label="Email"
+        name="email"
         value={newProductInfo.price}
         onChange={handleChange}
       />
-      <StyledSelectComponent
-        label="Cartela de Cores"
-        options={colorOptions}
-        value={newProductInfo.color}
-        onChange={handleChange}
-      />
       <StyledInput
-        label="URL do Produto"
-        name="url"
-        value={newProductInfo.url}
-        onChange={handleChange}
-      />
-      <StyledSelectComponent
-        label="Categoria do Produto"
-        options={categoryOptions}
-        value={newProductInfo.category}
-        onChange={handleChange}
-      />
-      <StyledInput
-        label="Quantidade Disponível"
-        name="quantity"
-        value={newProductInfo.quantity}
+        label="Senha"
+        name="senha"
+        value={newProductInfo.price}
         onChange={handleChange}
       />
       <StyledButton label="Enviar Cadastro" onClick={handleSubmit} />

@@ -4,11 +4,12 @@ import styled from 'styled-components';
 
 const InputCadastro = styled(TextField)`
   && {
-    width: 100%;
-    margin-bottom: 16px;
+    background-color: #ddd;
     border-radius: 10px;
-    background: #eee;
-    color: #666;
+    padding: 0.25em;
+    margin: 1em 10px;
+    border: none;
+    width: 90%
   }
 `;
 

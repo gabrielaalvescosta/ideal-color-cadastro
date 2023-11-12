@@ -30,7 +30,7 @@ export default function Login() {
       <DeviceWrapper>
     <Titulo h2="Login"/>
     <StyledInput
-        label="Nome do Produto"
+        label="Nome"
         name="name"
         value={formData.login}
         onChange={handleChange}

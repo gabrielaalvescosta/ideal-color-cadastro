@@ -4,9 +4,12 @@ import styled from 'styled-components';
 
 const Botao = styled(Button)`
   && {
-    background-color: #0070f3;
-    color: #ffffff;
-    padding: 10px 20px;
+    background-color: #61aebb;
+    color: white;
+    border-radius: 10px;
+    padding: 1em;
+    width: 90%;
+    cursor: pointer;
   }
 `;
 

@@ -20,8 +20,8 @@ export default function NavigatorMenu() {
         position: 'absolute',
         bottom: 0,
         height: '10vh',
-        width: 'inhherit',
-        backgroundColor: '#5aa4ad',
+        width: '100%',
+        backgroundColor: '#61AEBB',
       }}
     >
 

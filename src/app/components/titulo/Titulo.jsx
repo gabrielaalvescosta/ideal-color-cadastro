@@ -2,10 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TituloH2 = styled.h2`
-  background-color: #ddd;
-  color: #999;
+  color: white;
   width: 100%;
-  padding: 5%;
+  background-color: #61aebb;
+  font-family: Inter;
+  font-size: 2em;
+  text-align: center;
+  padding: 3em 10px;
+  margin: 0px
 `;
 
 export default function Titulo({ h2 }) {
