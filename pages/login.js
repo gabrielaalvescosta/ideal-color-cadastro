@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Titulo from '@/app/components/titulo/Titulo';
 import StyledInput from '@/app/components/input/Input';
+import StyledButton from '@/app/components/botao/Botao';
 import DeviceWrapper from '@/app/components/mobile/SimulacaoDevice';
 import Wrapper from '@/app/components/wrapper/Wrapper';
 import NavigatorMenu from '@/app/components/navigator/NavigatorMenu'
@@ -42,6 +43,7 @@ export default function Login() {
         value={formData.senha}
         onChange={handleChange}
     />
+          <StyledButton label="Logar" onClick={handleSubmit} />
     <NavigatorMenu/>
     </DeviceWrapper>
     </Wrapper>

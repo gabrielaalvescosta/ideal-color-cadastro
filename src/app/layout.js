@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Ideal Color',
-  description: 'Cadastro de produtos da loja',
+  description: 'Cartela de cores inteligente',
 }
 
 export default function RootLayout({ children }) {

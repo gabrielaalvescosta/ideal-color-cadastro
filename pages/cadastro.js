@@ -8,24 +8,22 @@ import Wrapper from '@/app/components/wrapper/Wrapper';
 import NavigatorMenu from '@/app/components/navigator/NavigatorMenu'
 
 
-const categoryOptions = [
-  { label: 'Eletrônicos', value: 'electronics' },
-  { label: 'Roupas', value: 'clothing' },
-  { label: 'Alimentos', value: 'food' },
-];
-
 export default function ProductForm() {
+
+  const handleEnviar = () => {
+    setEnviado(true);
+    const dataAtual = new Date();
+    const formattedData = `${dataAtual.getFullYear()}-${(dataAtual.getMonth() + 1).toString().padStart(2, '0')}-${dataAtual.getDate().toString().padStart(2, '0')}`;
+    setDataCadastro(formattedData);
+  };
 
   const [newProductInfo, setNewProductInfo] = useState({
     name: '',
     email: '',
     senha: '',
     cartelaCores: [],
-    
+    dataCadastro: ''
   });
-
-  let colorOptions = [];
-  let categoryOptions = [];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,11 +39,12 @@ export default function ProductForm() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(novoRegistro),
+       // body: JSON.stringify(novoRegistro),
       });
 
       if (response.ok) {
         console.log('Registro criado com sucesso!');
+        onMudarPagina('login');
       } else {
         console.error('Erro ao criar registro');
       }
@@ -55,20 +54,6 @@ export default function ProductForm() {
   };
 
 
-  async function getServerSideProps() {
-
-    try {
-      const response = await fetch(`/idealcolors/api/coloracaopessoal`);
-      if (!response.ok) {
-        throw new Error('Erro ao buscar cartelas');
-      }
-      colorOptions = await response.json();
-      return colorOptions;
-    } catch (error) {
-      console.error('Erro ao buscar categorias:', error);
-      return [];
-    }
-  }
 
   return (
     <Wrapper>

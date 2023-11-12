@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BottomNavigation, BottomNavigationAction } from '@mui/material';
-import { Person, Search, AddBox } from '@mui/icons-material';
+import { Person, Search, Camera } from '@mui/icons-material';
 import Link from 'next/link';
 
 export default function NavigatorMenu() {
@@ -27,10 +27,10 @@ export default function NavigatorMenu() {
 
       <BottomNavigationAction
         component={Link}
-        href="/cadastro"
-        label="Cadastro"
-        value="cadastro"
-        icon={<AddBox />}
+        href="/fotografar"
+        label="Fotografar"
+        value="fotografar"
+        icon={<Camera />}
       />
 
 
@@ -38,7 +38,7 @@ export default function NavigatorMenu() {
         component={Link}
         href="/login"
         label="Login"
-        value="login"
+        value="Profile/ login"
         icon={<Person />}
       />
 
