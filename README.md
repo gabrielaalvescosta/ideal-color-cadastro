@@ -1,5 +1,5 @@
 
-# Ideal Colors
+# Ideal Color
 
 Projeto referente a Challenge 2023 com empresa parceira PlusSoft. 
 A API de Coloração Pessoal "Ideal Color" fornece um conjunto de classes para ajudar os usuários a identificar as cores que melhor se adequam à sua aparência pessoal através da colorimetria pessoal.
@@ -12,7 +12,7 @@ Nossa solução oferece um recurso de reconhecimento de tonalidade que pode ajud
 Além disso, de modo que reduza o desperdício de recursos naturais, evitando a compra de roupas e acessórios que acabam descartados devido não impactar o visual como esperado.
 
 ## Video demonstrativo
-[Video aqui]
+<iframe width="560" height="315" src="https://www.youtube.com/embed/brPT8SqHQjs?si=Ud3zA1oyiZWL8-Gw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <h3>Integrantes - Grupo Nós 4</h3>
 <ul>
