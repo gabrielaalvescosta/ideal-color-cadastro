@@ -30,6 +30,9 @@ Além disso, de modo que reduza o desperdício de recursos naturais, evitando a 
 - React Icons
 - Tailwind CSS
 
+## Layout do Figma
+[Você pode conferir clicando aqui](https://www.figma.com/file/V8LW1CSu63k5R3UFuHK4GB/Ideal-Color?node-id=0%3A1&mode=dev)
+
 ### Front end desta aplicação em React Native para Android
 Está disponível no [Snack.expo.dev](https://snack.expo.dev/@milenaggoes/idealcolors--sprint4?platform=android)
 
