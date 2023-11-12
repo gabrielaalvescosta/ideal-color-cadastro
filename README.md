@@ -12,9 +12,10 @@ Nossa solução oferece um recurso de reconhecimento de tonalidade que pode ajud
 Além disso, de modo que reduza o desperdício de recursos naturais, evitando a compra de roupas e acessórios que acabam descartados devido não impactar o visual como esperado.
 
 ## Video demonstrativo
-<iframe width="560" height="315" src="https://www.youtube.com/embed/brPT8SqHQjs?si=Ud3zA1oyiZWL8-Gw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[Assista o video no Youtube](https://www.youtube.com/embed/brPT8SqHQjs?si=Ud3zA1oyiZWL8-Gw)
 
-<h3>Integrantes - Grupo Nós 4</h3>
+
+## Integrantes - Grupo Nós 4
 <ul>
   <li>96051 - Gabriela Silva Alves Costa</li>
   <li>96056 – Guilherme da Silva Nascimento</li>
